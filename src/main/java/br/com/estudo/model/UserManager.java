@@ -14,4 +14,13 @@ public class UserManager {
     public List<Usuario> getUsers() {
         return users;
     }
+
+    public Usuario searchByEmail(String email){
+        for(Usuario user : users){
+            if(user.getEmail().equals(email)){
+                return user;
+            }
+        }
+        return null;
+    }
 }
