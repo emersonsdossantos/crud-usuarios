@@ -42,6 +42,6 @@ public class Usuario {
     }
 
     @Override
-    public String toString(){ return "Nome: " + nome + "\nEmail: " + email + "\nIdade: " + idade; }
+    public String toString(){ return "Nome: " + nome + "\nEmail: " + email + "\nIdade: " + idade + "\n"; }
 
 }
