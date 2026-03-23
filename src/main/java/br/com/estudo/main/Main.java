@@ -20,5 +20,12 @@ public class Main {
         for(Usuario user : users){
             System.out.println(user);
         }
+
+        Usuario userFound = manager.searchByEmail("maria@teste.com");
+        if(userFound != null){
+            System.out.println(userFound);
+        } else{
+            System.out.println("Usuário não encontrado");
+        }
     }
 }
