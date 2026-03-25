@@ -26,8 +26,8 @@ public class Main {
             System.out.println("Usuário não encontrado");
         }
 
-        boolean removed = manager.deleteByEmail("maria@teste.com");
-        if(removed){
+        boolean remove = manager.deleteByEmail("maria@teste.com");
+        if(remove){
             System.out.println("Usuario removido");
         } else{
             System.out.println("Usuario não encontrado");
