@@ -37,6 +37,17 @@ public class Main {
             System.out.println(user);
         }
 
+        boolean removeUser = manager.deleteById(1);
+        if(removeUser){
+            System.out.println("Usuario removido com sucesso!!");
+        }else{
+            System.out.println("Usuario nao encontrado");
+        }
+        System.out.println("=== LISTA APÓS DELETE VIA ID ===");
+        for(Usuario user : manager.getUsers()){
+            System.out.println(user);
+        }
+
         boolean update = manager.updateById(3, "Pedrinho", "pedrinho@teste.com", 31);
         if(update){
             System.out.println("Usuario atualizado!!!!");
