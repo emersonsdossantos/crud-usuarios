@@ -2,7 +2,6 @@ package br.com.estudo.main;
 
 import br.com.estudo.model.UserManager;
 import br.com.estudo.model.Usuario;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +15,7 @@ public class Main {
         manager.addUser(user2);
         manager.addUser(user3);
 
-        List<Usuario> users = manager.getUsers();
-        for(Usuario user : users){
+        for(Usuario user : manager.getUsers()){
             System.out.println(user);
         }
 
