@@ -54,4 +54,14 @@ public class UserManager {
         return true;
     }
 
+    public boolean updateById(int id, String novoNome, String novoEmail, int novaIdade){
+        Usuario user = searchById(id);
+        if(user == null){
+            return false;
+        }
+        user.setNome(novoNome);
+        user.setEmail(novoEmail);
+        user.setIdade(novaIdade);
+        return true;
+    }
 }
