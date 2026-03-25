@@ -59,4 +59,9 @@ public class Main {
             System.out.println(user);
         }
     }
+    public static void listUsers(UserManager manager){
+        for(Usuario user : manager.getUsers()){
+            System.out.println(user);
+        }
+    }
 }
