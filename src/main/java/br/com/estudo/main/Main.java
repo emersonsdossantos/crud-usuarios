@@ -32,7 +32,7 @@ public class Main {
         } else{
             System.out.println("Usuario não encontrado");
         }
-        System.out.println("=== LISTA APÓS DELETE ===");
+        System.out.println("=== LISTA APÓS DELETE VIA EMAIL===");
         for(Usuario user : manager.getUsers()){
             System.out.println(user);
         }
