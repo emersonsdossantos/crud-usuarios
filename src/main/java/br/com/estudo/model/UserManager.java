@@ -18,6 +18,7 @@ public class UserManager {
         return users;
     }
 
+    //BUSCAR POR ID
     public Usuario searchById(int id){
         for(Usuario user : users){
             if(user.getId() == id){
@@ -27,6 +28,7 @@ public class UserManager {
         return null;
     }
 
+    //BUSCAR POR EMAIL
     public Usuario searchByEmail(String email){
         for(Usuario user : users){
             if(user.getEmail().equals(email)){
@@ -36,7 +38,8 @@ public class UserManager {
         return null;
     }
 
-    public boolean deleteByEmail(String email){
+    //DELETE POR EMAIL
+    public boolean removeByEmail(String email){
         Usuario user = searchByEmail(email);
         if(user == null){
             return false;
@@ -45,7 +48,8 @@ public class UserManager {
         return true;
     }
 
-    public boolean deleteById(int id){
+    //DELETE POR ID
+    public boolean removeById(int id){
         Usuario user = searchById(id);
         if(user == null){
             return false;
@@ -54,6 +58,7 @@ public class UserManager {
         return true;
     }
 
+    //UPDATE POR ID
     public boolean updateById(int id, String novoNome, String novoEmail, int novaIdade){
         Usuario user = searchById(id);
         if(user == null){

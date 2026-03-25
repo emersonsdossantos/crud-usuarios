@@ -21,23 +21,23 @@ public class Main {
         if(userFound != null){
             System.out.println(userFound);
         } else{
-            System.out.println("Usuário não encontrado");
+            System.out.println("Usuário não encontrado.");
         }
 
-        boolean remove = manager.deleteByEmail("maria@teste.com");
+        boolean remove = manager.removeByEmail("maria@teste.com");
         if(remove){
-            System.out.println("Usuario removido");
+            System.out.println("Usuario removido com sucesso.");
         } else{
-            System.out.println("Usuario não encontrado");
+            System.out.println("Usuario não encontrado.");
         }
         System.out.println("=== LISTA APÓS DELETE VIA EMAIL===");
         listUsers(manager);
 
-        boolean removeUser = manager.deleteById(1);
+        boolean removeUser = manager.removeById(1);
         if(removeUser){
-            System.out.println("Usuario removido com sucesso!!");
+            System.out.println("Usuario removido com sucesso.");
         }else{
-            System.out.println("Usuario nao encontrado");
+            System.out.println("Usuario nao encontrado.");
         }
         System.out.println("=== LISTA APÓS DELETE VIA ID ===");
         listUsers(manager);
