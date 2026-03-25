@@ -37,5 +37,15 @@ public class Main {
             System.out.println(user);
         }
 
+        boolean update = manager.updateById(3, "Pedrinho", "pedrinho@teste.com", 31);
+        if(update){
+            System.out.println("Usuario atualizado!!!!");
+        }else{
+            System.out.println("Usuario não encontrado.");
+        }
+        System.out.println("=== LISTA APÓS ATUALIZAÇÃO ===");
+        for(Usuario user : manager.getUsers()){
+            System.out.println(user);
+        }
     }
 }
