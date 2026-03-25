@@ -18,6 +18,15 @@ public class UserManager {
         return users;
     }
 
+    public Usuario searchById(int id){
+        for(Usuario user : users){
+            if(user.getId() == id){
+                return user;
+            }
+        }
+        return null;
+    }
+
     public Usuario searchByEmail(String email){
         for(Usuario user : users){
             if(user.getEmail().equals(email)){
