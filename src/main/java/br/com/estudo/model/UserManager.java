@@ -23,4 +23,13 @@ public class UserManager {
         }
         return null;
     }
+
+    public boolean deleteByEmail(String email){
+        Usuario user = searchByEmail(email);
+        if(user == null){
+            return false;
+        }
+       users.remove(user);
+        return true;
+    }
 }
