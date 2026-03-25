@@ -15,9 +15,7 @@ public class Main {
         manager.addUser(user2);
         manager.addUser(user3);
 
-        for(Usuario user : manager.getUsers()){
-            System.out.println(user);
-        }
+        listUsers(manager);
 
         Usuario userFound = manager.searchByEmail("maria@teste.com");
         if(userFound != null){
@@ -33,9 +31,7 @@ public class Main {
             System.out.println("Usuario não encontrado");
         }
         System.out.println("=== LISTA APÓS DELETE VIA EMAIL===");
-        for(Usuario user : manager.getUsers()){
-            System.out.println(user);
-        }
+        listUsers(manager);
 
         boolean removeUser = manager.deleteById(1);
         if(removeUser){
@@ -44,9 +40,7 @@ public class Main {
             System.out.println("Usuario nao encontrado");
         }
         System.out.println("=== LISTA APÓS DELETE VIA ID ===");
-        for(Usuario user : manager.getUsers()){
-            System.out.println(user);
-        }
+        listUsers(manager);
 
         boolean update = manager.updateById(3, "Pedrinho", "pedrinho@teste.com", 31);
         if(update){
@@ -55,9 +49,7 @@ public class Main {
             System.out.println("Usuario não encontrado.");
         }
         System.out.println("=== LISTA APÓS ATUALIZAÇÃO ===");
-        for(Usuario user : manager.getUsers()){
-            System.out.println(user);
-        }
+        listUsers(manager);
     }
     public static void listUsers(UserManager manager){
         for(Usuario user : manager.getUsers()){
