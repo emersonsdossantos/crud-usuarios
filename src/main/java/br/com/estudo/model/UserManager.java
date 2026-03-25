@@ -44,4 +44,14 @@ public class UserManager {
        users.remove(user);
         return true;
     }
+
+    public boolean deleteById(int id){
+        Usuario user = searchById(id);
+        if(user == null){
+            return false;
+        }
+        users.remove(user);
+        return true;
+    }
+
 }
