@@ -25,5 +25,17 @@ public class Main {
         } else{
             System.out.println("Usuário não encontrado");
         }
+
+        boolean removed = manager.deleteByEmail("maria@teste.com");
+        if(removed){
+            System.out.println("Usuario removido");
+        } else{
+            System.out.println("Usuario não encontrado");
+        }
+        System.out.println("=== LISTA APÓS DELETE ===");
+        for(Usuario user : manager.getUsers()){
+            System.out.println(user);
+        }
+
     }
 }
