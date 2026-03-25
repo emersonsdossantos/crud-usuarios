@@ -5,10 +5,13 @@ import java.util.List;
 
 public class UserManager {
 
+    private int nextId = 1;
     private final List<Usuario> users = new ArrayList<>();
 
     public void addUser(Usuario user) {
+        user.setId(nextId);
         users.add(user);
+        nextId++;
     }
 
     public List<Usuario> getUsers() {
