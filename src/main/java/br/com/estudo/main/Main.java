@@ -24,12 +24,17 @@ public class Main {
         listUsers(manager);
         while (continuar){
             System.out.println("0 - Sair");
+            System.out.println("1 - Listar Usuarios");
 
             opcao = scan.nextInt();
             switch (opcao){
                 case 0:
                     System.out.println("Sistema Encerrado");
                     continuar = false;
+                    break;
+                case 1:
+                    listUsers(manager);
+                    break;
                     break;
                 default:
                     System.out.println("Opção Invalida");
