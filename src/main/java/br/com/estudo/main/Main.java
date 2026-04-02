@@ -22,6 +22,19 @@ public class Main {
         manager.addUser(user3);
 
         listUsers(manager);
+        while (continuar){
+            System.out.println("0 - Sair");
+
+            opcao = scan.nextInt();
+            switch (opcao){
+                case 0:
+                    System.out.println("Sistema Encerrado");
+                    continuar = false;
+                    break;
+                default:
+                    System.out.println("Opção Invalida");
+            }
+        }
 
         Usuario userFound = manager.searchByEmail("maria@teste.com");
         if(userFound != null){
