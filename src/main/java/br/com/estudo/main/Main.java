@@ -25,6 +25,7 @@ public class Main {
         while (continuar){
             System.out.println("0 - Sair");
             System.out.println("1 - Listar Usuarios");
+            System.out.println("2 - Cadastrar Usuario");
 
             opcao = scan.nextInt();
             switch (opcao){
@@ -35,6 +36,15 @@ public class Main {
                 case 1:
                     listUsers(manager);
                     break;
+                case 2:
+                    scan.nextLine();
+                    System.out.print("Digite o nome: ");
+                    String nome = scan.nextLine();
+                    System.out.print("Digite o email: ");
+                    String email = scan.nextLine();
+                    System.out.print("Digite a idade: ");
+                    int idade = scan.nextInt();
+                    manager.addUser(new Usuario(nome, email, idade));
                     break;
                 default:
                     System.out.println("Opção Invalida");
