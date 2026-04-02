@@ -21,7 +21,6 @@ public class Main {
         manager.addUser(user2);
         manager.addUser(user3);
 
-        listUsers(manager);
         while (continuar){
             System.out.println("0 - Sair");
             System.out.println("1 - Listar Usuarios");
@@ -84,6 +83,8 @@ public class Main {
         }
         System.out.println("=== LISTA APÓS ATUALIZAÇÃO ===");
         listUsers(manager);
+
+        scan.close();
     }
     public static void listUsers(UserManager manager){
         for(Usuario user : manager.getUsers()){
