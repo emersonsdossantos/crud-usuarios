@@ -3,8 +3,14 @@ package br.com.estudo.main;
 import br.com.estudo.model.UserManager;
 import br.com.estudo.model.Usuario;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+
+        int opcao;
+        boolean continuar = true;
+        Scanner scan = new Scanner(System.in);
 
         Usuario user1 = new Usuario("Joao", "joao@teste.com", 40);
         Usuario user2 = new Usuario("Maria", "maria@teste.com", 20);
