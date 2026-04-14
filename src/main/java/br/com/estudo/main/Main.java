@@ -26,6 +26,7 @@ public class Main {
             System.out.println("1 - Listar Usuarios");
             System.out.println("2 - Cadastrar Usuario");
             System.out.println("3 - Buscar por ID");
+            System.out.println("4 - Atualizar Usuário");
 
             opcao = scan.nextInt();
             switch (opcao){
@@ -57,12 +58,27 @@ public class Main {
                         System.out.println("Usuario não encontrado");
                     }
                     break;
+                case 4:
+                    System.out.print("Informe o Id do usuario: ");
+                    int userId = scan.nextInt();
+                    scan.nextLine();
+                    System.out.print("Informe o nome: ");
+                    String novoNome = scan.nextLine();
+                    System.out.print("Informe o email: ");
+                    String novoEmail = scan.nextLine();
+                    System.out.print ("Informe a idade: ");
+                    int novaIdade = scan.nextInt();
+                    boolean update = manager.updateById(userId, novoNome, novoEmail, novaIdade);
+                    if(update){
+                        System.out.println("Usuario atualizado com sucesso!");
+                    } else{
+                        System.out.println("Usuario não encontrado.");
+                    }
+                    break;
                 default:
                     System.out.println("Opção Invalida");
             }
         }
-
-
 
         boolean remove = manager.removeByEmail("maria@teste.com");
         if(remove){
