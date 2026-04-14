@@ -27,6 +27,7 @@ public class Main {
             System.out.println("2 - Cadastrar Usuario");
             System.out.println("3 - Buscar por ID");
             System.out.println("4 - Atualizar Usuário");
+            System.out.println("5 - Remover Usuário");
 
             opcao = scan.nextInt();
             switch (opcao){
@@ -73,6 +74,16 @@ public class Main {
                         System.out.println("Usuario atualizado com sucesso!");
                     } else{
                         System.out.println("Usuario não encontrado.");
+                    }
+                    break;
+                case 5:
+                    System.out.print("Informe o id do usuario: ");
+                    int idToRemoved = scan.nextInt();
+                    boolean removed = manager.removeById(idToRemoved);
+                    if(removed){
+                        System.out.println("Usuário removido com sucesso!");
+                    } else {
+                        System.out.println("Usuario não encontrado");
                     }
                     break;
                 default:
