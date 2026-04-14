@@ -45,6 +45,7 @@ public class Main {
                     System.out.print("Digite a idade: ");
                     int idade = scan.nextInt();
                     manager.addUser(new Usuario(nome, email, idade));
+                    System.out.println("Usuário cadastrado com sucesso");
                     break;
                 case 3:
                     System.out.print("Informe o ID: ");
