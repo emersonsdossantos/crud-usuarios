@@ -25,6 +25,7 @@ public class Main {
             System.out.println("0 - Sair");
             System.out.println("1 - Listar Usuarios");
             System.out.println("2 - Cadastrar Usuario");
+            System.out.println("3 - Buscar por ID");
 
             opcao = scan.nextInt();
             switch (opcao){
@@ -44,6 +45,16 @@ public class Main {
                     System.out.print("Digite a idade: ");
                     int idade = scan.nextInt();
                     manager.addUser(new Usuario(nome, email, idade));
+                    break;
+                case 3:
+                    System.out.print("Informe o ID: ");
+                    int id = scan.nextInt();
+                    Usuario userFound = manager.searchById(id);
+                    if(userFound != null){
+                        System.out.println(userFound);
+                    } else{
+                        System.out.println("Usuario não encontrado");
+                    }
                     break;
                 default:
                     System.out.println("Opção Invalida");
