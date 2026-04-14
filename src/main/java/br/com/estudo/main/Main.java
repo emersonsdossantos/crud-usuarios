@@ -10,16 +10,10 @@ public class Main {
 
         int opcao;
         boolean continuar = true;
+
         Scanner scan = new Scanner(System.in);
 
-        Usuario user1 = new Usuario("Joao", "joao@teste.com", 40);
-        Usuario user2 = new Usuario("Maria", "maria@teste.com", 20);
-        Usuario user3 = new Usuario("Pedro", "pedro@teste.com", 30);
-
         UserManager manager = new UserManager();
-        manager.addUser(user1);
-        manager.addUser(user2);
-        manager.addUser(user3);
 
         while (continuar){
             System.out.println("0 - Sair");
