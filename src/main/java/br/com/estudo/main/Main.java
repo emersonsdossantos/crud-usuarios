@@ -62,12 +62,7 @@ public class Main {
             }
         }
 
-        Usuario userFound = manager.searchByEmail("maria@teste.com");
-        if(userFound != null){
-            System.out.println(userFound);
-        } else{
-            System.out.println("Usuário não encontrado.");
-        }
+
 
         boolean remove = manager.removeByEmail("maria@teste.com");
         if(remove){
