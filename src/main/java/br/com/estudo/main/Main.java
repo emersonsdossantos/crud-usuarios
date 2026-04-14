@@ -98,15 +98,6 @@ public class Main {
         System.out.println("=== LISTA APÓS DELETE VIA ID ===");
         listUsers(manager);
 
-        boolean update = manager.updateById(3, "Pedrinho", "pedrinho@teste.com", 31);
-        if(update){
-            System.out.println("Usuario atualizado!!!!");
-        }else{
-            System.out.println("Usuario não encontrado.");
-        }
-        System.out.println("=== LISTA APÓS ATUALIZAÇÃO ===");
-        listUsers(manager);
-
         scan.close();
     }
     public static void listUsers(UserManager manager){
