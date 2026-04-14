@@ -100,15 +100,6 @@ public class Main {
         System.out.println("=== LISTA APÓS DELETE VIA EMAIL===");
         listUsers(manager);
 
-        boolean removeUser = manager.removeById(1);
-        if(removeUser){
-            System.out.println("Usuario removido com sucesso.");
-        }else{
-            System.out.println("Usuario nao encontrado.");
-        }
-        System.out.println("=== LISTA APÓS DELETE VIA ID ===");
-        listUsers(manager);
-
         scan.close();
     }
     public static void listUsers(UserManager manager){
