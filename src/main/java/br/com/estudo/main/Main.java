@@ -91,15 +91,6 @@ public class Main {
             }
         }
 
-        boolean remove = manager.removeByEmail("maria@teste.com");
-        if(remove){
-            System.out.println("Usuario removido com sucesso.");
-        } else{
-            System.out.println("Usuario não encontrado.");
-        }
-        System.out.println("=== LISTA APÓS DELETE VIA EMAIL===");
-        listUsers(manager);
-
         scan.close();
     }
     public static void listUsers(UserManager manager){
